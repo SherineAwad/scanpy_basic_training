@@ -16,7 +16,7 @@
   - 10–20%: Investigate possible cell stress or damage.
   - Above 20–30%: Potentially poor-quality cells.
 
-*Note: These are general guidelines, not universal filtering thresholds.*
+Note: These are general guidelines, not universal filtering thresholds.
 
 ### Normalisation (normalize_total)
 
@@ -46,6 +46,6 @@ Projects high-dimensional cell relationships into two dimensions, allowing visua
 
 Colours cells according to their sample of origin, helping assess sample distribution, overlap and potential batch effects.
 
-**Overall workflow:**
+Overall workflow:
 
 QC and Filtering → Normalisation → Log Transformation → Scaling → PCA → Neighbour Graph → UMAP → Visualisation
