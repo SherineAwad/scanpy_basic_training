@@ -20,7 +20,7 @@
 
 ## Normalisation (normalize_total)
 
-Adjusts the total RNA counts of each cell to a common target (10,000), making cells comparable despite differences in sequencing depth.
+Adjusts total RNA counts of each cell to a common target (10,000), making cells comparable despite differences in sequencing depth.
 
 ## Log Transformation (log1p)
 
