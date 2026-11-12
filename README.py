@@ -1,16 +1,18 @@
+cat >> README.md <<'EOF'
+
 ## scRNA-seq: Quality Control and Preprocessing
 
 ### Quality Control (QC)
 
-- n_genes_by_counts: Number of different genes detected per cell.
+- **n_genes_by_counts:** Number of different genes detected per cell.
   - Below 200–500: Potentially poor-quality cells.
   - Above 5,000–6,000: Investigate possible doublets.
 
-- total_counts: Total RNA counts (UMIs) detected per cell.
+- **total_counts:** Total RNA counts (UMIs) detected per cell.
   - Below 500–1,000: Potentially poor-quality cells.
   - Above 20,000–30,000: Investigate possible doublets.
 
-- pct_counts_mt: Percentage of counts originating from mitochondrial genes.
+- **pct_counts_mt:** Percentage of counts originating from mitochondrial genes.
   - Below 5%: Generally good.
   - 5–10%: Generally acceptable.
   - 10–20%: Investigate possible cell stress or damage.
@@ -44,7 +46,7 @@ Projects high-dimensional cell relationships into two dimensions, allowing visua
 
 ### Global UMAP
 
-Colours cells according to their sample of origin, helping assess sample distribution, overlap and potential batch effects.
+Colours cells according to their sample of origin, helping assess sample distribution, overlap and potential sample-specific or batch effects.
 
 Overall workflow:
 
