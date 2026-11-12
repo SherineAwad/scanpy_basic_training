@@ -1,5 +1,3 @@
-cat >> README.md <<'EOF'
-
 ## scRNA-seq: Quality Control and Preprocessing
 
 ### Quality Control (QC)
