@@ -1,6 +1,6 @@
-## scRNA-seq: Quality Control and Preprocessing
+# scRNA-seq: Quality Control and Preprocessing
 
-### Quality Control (QC)
+## Quality Control (QC)
 
 - **n_genes_by_counts:** Number of different genes detected per cell.
   - Below 200–500: Potentially poor-quality cells.
@@ -16,36 +16,36 @@
   - 10–20%: Investigate possible cell stress or damage.
   - Above 20–30%: Potentially poor-quality cells.
 
-Note: These are general guidelines, not universal filtering thresholds.
+**Note:** These are general guidelines, not universal filtering thresholds.
 
-### Normalisation (normalize_total)
+## Normalisation (normalize_total)
 
-Adjusts total RNA counts of each cell to a common target (10,000), making cells comparable despite differences in sequencing depth.
+Adjusts the total RNA counts of each cell to a common target (10,000), making cells comparable despite differences in sequencing depth.
 
-### Log Transformation (log1p)
+## Log Transformation (log1p)
 
 Applies a logarithmic transformation to compress the expression value range, reducing the influence of highly expressed genes.
 
-### Scaling (scale)
+## Scaling (scale)
 
 Centres and standardises gene expression values across cells, preventing highly variable genes from dominating PCA simply because of their numerical range.
 
-### Dimensionality Reduction (PCA)
+## Dimensionality Reduction (PCA)
 
 Simplifies thousands of genes into a smaller number of features (principal components), retaining major patterns of variation between cells.
 
-### Neighbour Graph (neighbors)
+## Neighbour Graph (neighbors)
 
 Identifies cells with similar expression profiles based on their PCA coordinates, establishing relationships between cells.
 
-### UMAP (umap)
+## UMAP (umap)
 
 Projects high-dimensional cell relationships into two dimensions, allowing visualisation of groups of transcriptionally similar cells.
 
-### Global UMAP
+## Global UMAP
 
 Colours cells according to their sample of origin, helping assess sample distribution, overlap and potential sample-specific or batch effects.
 
-Overall workflow:
+## Overall Workflow
 
 QC and Filtering → Normalisation → Log Transformation → Scaling → PCA → Neighbour Graph → UMAP → Visualisation
